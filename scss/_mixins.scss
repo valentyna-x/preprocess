@@ -1,0 +1,19 @@
+@mixin flex($justify, $align, $gap, $direction: row) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+    flex-direction: $direction;
+}
+
+@mixin transform($property) {
+    transform: $property;
+    -webkit-transform: $property;
+    -ms-transform: $property;
+}
+
+@mixin title() {
+    font-size: 1.2em;
+    color: $color_title;
+    letter-spacing: 1px;
+}

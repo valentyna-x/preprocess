@@ -1,0 +1,52 @@
+@import 'normalize';
+@import 'vars';
+@import 'mixins';
+@import 'extends';
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+html, body {
+    min-height: 100vh;
+    font-family: $font_family_main;
+    font-size: $font_size_main;
+    background: $background_main;
+}
+
+.container {
+    max-width: $container_width;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 10px 20px;
+
+    &__title {
+        position: relative;
+        color: $color_title;
+        display: flex;
+        text-align: center;
+
+        
+        &::after, 
+        &::before {
+            content: '';
+            position: absolute;
+            bottom:50%;
+            width: 40px;
+            height: 2px;
+            background-color: #FFCC00;
+        }
+        &::after {
+            left: 60%;
+            width: 140px;
+        }
+        &::before{
+            left: -8%; 
+            
+        }
+    }
+}
+
